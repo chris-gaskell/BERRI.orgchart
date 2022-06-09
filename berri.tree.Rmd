@@ -1,0 +1,105 @@
+---
+title: "Untitled"
+author: "Chris Gaskell"
+date: "08/06/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(highcharter)
+library(tidyverse)
+
+highchart() %>%
+  hc_chart(type = 'organization', inverted = TRUE) %>%
+  hc_title(text = 'BERRI Organisational Hierarchy') %>%
+  hc_add_series(
+    name = 'Highsoft',
+    data = list(
+#      list(from = 'Shareholders', to = 'Board'),
+#      list(from = 'Board', to = 'CEO'),
+      list(from = 'CEO', to = 'CPs'),
+      list(from = 'CEO', to = 'CPO'),
+      list(from = 'CEO', to = 'CSO'),
+      list(from = 'CEO', to = 'CMO'),
+      list(from = 'CEO', to = 'HR'),
+      list(from = 'CPs', to = 'Chris'),
+      list(from = 'CPs', to = 'Lucky'),
+      list(from = 'CPs', to = 'Liam'),
+      list(from = 'CSO', to = 'Sales'),
+      list(from = 'CMO', to = 'Market')
+    ),
+    # levels = list(
+    #   list(level = 0, color = 'silver', dataLabels = list(color = 'black'), height = 55),
+    #   list(level = 1, color = 'silver', dataLabels = list(color = 'black'), height = 55),
+    #   list(level = 2, color = '#980104'),
+    #   list(level = 4, color = '#359154')
+    # ),
+    nodes = list(
+#      list(id = 'Shareholders'),
+#      list(id = 'Board'),
+      list(id = 'CEO', title = 'CEO', name = 'Grethe Hjetland', image = 'AnneJorunn.jpeg'),
+      list(id = 'HR', title = 'HR/CFO', name = 'Anne Jorunn Fjarestad', color = '#007ad0', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132314/AnneJorunn.jpg', column = 1, offset = '100%'),
+      list(id = 'CPs', title = 'CPs', name = 'Clinical Psychologists', color = '#007ad0', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12140620/Christer.jpg', column = 2, layout = 'hanging'),
+      list(id = 'CPO', title = 'CPO', name = 'Torstein Honsi', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12131849/Torstein1.jpg', column = 2),
+      list(id = 'CSO', title = 'CSO', name = 'Anita Nesse', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132313/Anita.jpg', column = 2, layout = 'hanging'),
+      list(id = 'CMO', title = 'CMO', name = 'Vidar Brekke', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/13105551/Vidar.jpg', column = 2, layout = 'hanging'),
+      list(id = 'Product', name = 'Product developers'),
+      list(id = 'Chris', name = 'Chris', column = 3),
+      list(id = 'Lucky', name = 'Lucky', column = 3),
+      list(id = 'Liam', name = 'Liam', column = 3),
+      list(id = 'Market', name = 'Marketing team')
+    ),
+    colorByPoint = TRUE,
+    color = '#007ad0',
+    dataLabels = list(color = 'white'),
+    borderColor = 'white',
+    nodeWidth = 65
+  ) %>%
+  hc_tooltip(outside = TRUE)
+```
+
+
+
+
+
+```{r}
+highchart() %>%
+  hc_chart(type = 'organization', inverted = T) %>%
+  hc_add_series(
+    data = list(
+      list(from = 'Miriam', to = 'Psychology'),
+      list(from = 'Miriam', to = 'Ben'),
+      list(from = 'Miriam', to = 'Teg'),
+      list(from = 'Miriam', to = 'Emma'),
+      list(from = 'Miriam', to = 'Tech')
+      ),
+     levels = list(
+      list(level = 0, color = 'silver', dataLabels = list(color = 'black'), height = 55),
+      list(level = 1, color = 'silver', dataLabels = list(color = 'black'), height = 55),
+      list(level = 2, color = '#980104'),
+      list(level = 4, color = '#359154')
+    ),
+    nodes = list(
+      list(id = 'Shareholders'),
+      list(id = 'Board'),
+      list(id = 'CEO', title = 'CEO', name = 'Grethe Hjetland', image = 'AnneJorunn.jpeg'),
+      list(id = 'HR', title = 'HR/CFO', name = 'Anne Jorunn Fjarestad', color = '#007ad0', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132314/AnneJorunn.jpg', column = 3, offset = '75%'),
+      list(id = 'CPs', title = 'CPs', name = 'Clinical Psychologists', color = '#007ad0', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12140620/Christer.jpg', column = 4, layout = 'hanging'),
+      list(id = 'CPO', title = 'CPO', name = 'Torstein Honsi', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12131849/Torstein1.jpg', column = 4),
+      list(id = 'CSO', title = 'CSO', name = 'Anita Nesse', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132313/Anita.jpg', column = 4, layout = 'hanging'),
+      list(id = 'CMO', title = 'CMO', name = 'Vidar Brekke', image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/13105551/Vidar.jpg', column = 4, layout = 'hanging'),
+      list(id = 'Product', name = 'Product developers'),
+      list(id = 'Web', name = 'Web devs, sys admin'),
+      list(id = 'Sales', name = 'Sales team'),
+      list(id = 'Market', name = 'Marketing team')
+    ),
+    colorByPoint = TRUE,
+    color = '#007ad0',
+    dataLabels = list(color = 'white'),
+    borderColor = 'white',
+    nodeWidth = 65
+  ) %>%
+  hc_tooltip(outside = TRUE)
+
+```
+
