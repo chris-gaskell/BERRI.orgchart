@@ -47,7 +47,7 @@ highchart() %>%
            image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/IMG_7457.jpg?raw=true',
            column = 1, layout = 'hanging'),
       list(id = 'CMO', title = 'CMO', name = 'Vidar Brekke',
-           image = 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/13105551/Vidar.jpg',
+           image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/IMG_7453.jpg?raw=true',
            column = 1, layout = 'hanging'),
       list(id = 'Product', name = 'Product developers'),
       list(id = 'Chris', title = 'Clinical Psychologist', name = 'Chris Gaskell',
