@@ -29,7 +29,8 @@ highchart() %>%
           list(from = 'CEO', to = 'Emma'),
           list(from = 'CEO', to = 'Ben'),
           list(from = 'CEO', to = 'Teg'),
-          list(from = 'CEO', to = 'R+D'),
+          list(from = 'CEO', to = 'NED'),
+          list(from = 'CEO', to = 'Kieran'),
           # Level 3
           list(from = 'CPs', to = 'Chris'),
           list(from = 'CPs', to = 'Lucky'),
@@ -60,7 +61,7 @@ highchart() %>%
       list(id = 'CEO', title = 'CEO', name = 'Miriam Silver', image =
       'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/Miriam.png?raw=true'),
 # Teg
-  list(id = 'Teg', title = 'NA', name = 'Teg',
+  list(id = 'Teg', title = 'Chief Technical Officer (CTO)', name = 'Tegai Lansdell',
      image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/Ben.jpg?raw=true',
      column = 1, layout = 'hanging'),
 # Emma
@@ -72,48 +73,57 @@ highchart() %>%
        image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/Ben.jpg?raw=true',
        column = 1, layout = 'hanging'),
 # Richard & Ned
-  list(id = 'R+D', name = 'Richard & Dan (Ned)',
+  list(id = 'NED', name = 'Richard Evans', title = 'Non Executive Director',
        #image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/Ben.jpg?raw=true',
        column = 2, layout = 'hanging'),
+# Richard Evans
+  list(id = 'Kieran', name = 'Kieran Chappell', title = 'Operations Manager',
+       #image = 'https://github.com/chris-gaskell/BERRI.orgchart/blob/main/images/Ben.jpg?raw=true',
+       column = 2, layout = 'hanging'),
+
 # Clinical Psychologists 
  list(id = 'CPs', #title = 'CPs',
       name = 'Clinical Psychologists', color = '#007ad0', #image = ,
       column = 1),
 # Chris 
   list(id = 'Chris', title = 'Clinical Psychologist', name = 'Chris Gaskell',
-       image = 'https://www.chris-gaskell.com/me.jpg', column = 3),
+       image = 'https://www.chris-gaskell.com/me.jpg', column = 3, layout = 'hanging'),
 # Lucky
-   list(id = 'Lucky', title = 'Clinical Psychologist', name = 'Lucky',
-         image = 'https://www.chris-gaskell.com/me.jpg', column = 3),
+   list(id = 'Lucky', title = 'Clinical Psychologist', name = 'Lucky ', color = 'red',
+         image = 'https://www.chris-gaskell.com/me.jpg', column = 3, layout = 'hanging'),
 # Liam
-   list(id = 'Liam', title = 'Clinical Psychologist', name = 'Liam',
-         image = 'https://www.chris-gaskell.com/me.jpg', column = 3),
+   list(id = 'Liam', title = 'Clinical Psychologist', name = 'Liam Gillian',
+         image = 'https://www.chris-gaskell.com/me.jpg', column = 3, layout = 'hanging'),
 # Jasmine
-  list(id = 'Jasmine', name = 'Jasmine', title = "N/A"
+  list(id = 'Jasmin', name = 'Jasmin Wason', title = "Programmer"
        #image = 
        ),
 # Richard 
-  list(id = 'Richard', name = 'Richard', title = "N/A"
+  list(id = 'Richard', name = 'Richard Hooper', title = "Programmer"
        #image =
        ),
 # Scott 
-  list(id = 'Scott', name = 'Scott', title = "N/A",
+  list(id = 'Scott', name = 'Scott Milsom', title = "N/A",
         image = 'https://www.chris-gaskell.com/me.jpg'),
 # Amy
-  list(id = 'Amy', name = 'Amy', title = "N/A",
+  list(id = 'Amy', name = 'Amy Malone', title = "Assistant Psychologist / Field Worker",
        image = 'https://www.chris-gaskell.com/me.jpg'),
 # Beth
-  list(id = 'Beth', name = 'Beth', title = "N/A",
-       image = 'https://www.chris-gaskell.com/me.jpg', column = 6),
+  list(id = 'Beth', name = 'Beth Pittuck', title = "N/A",
+       image = 'https://www.chris-gaskell.com/me.jpg'#, column = 6
+       ),
 # Shannon
-  list(id = 'Shannon', name = 'Shannon', title = "N/A",
-       image = 'https://www.chris-gaskell.com/me.jpg', column = 6),
+  list(id = 'Shannon', name = 'Shannon', title = "Assistant Psychologist / Field Worker",
+       image = 'https://www.chris-gaskell.com/me.jpg'#, column = 6
+       ),
 # Zara
-  list(id = 'Zara', name = 'Zara', title = "N/A",
-       image = 'https://www.chris-gaskell.com/me.jpg', column = 5),
+  list(id = 'Zara', name = 'Zara', title = "Assistant Psychologist",
+       image = 'https://www.chris-gaskell.com/me.jpg'#, column = 5
+       ),
 # Sophie
-  list(id = 'Sophie', name = 'Sophie', title = "N/A",
-       image = 'https://www.chris-gaskell.com/me.jpg', column = 6)
+  list(id = 'Sophie', name = 'Sophie', title = "Assistant Psychologist / Field Worker", color = '#123123',
+       image = 'https://www.chris-gaskell.com/me.jpg'#, '#, column = 6
+       )
      ),
     
 
